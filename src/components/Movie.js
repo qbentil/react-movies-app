@@ -1,14 +1,14 @@
-const MovieItem = () => {
+const MovieItem = ({poster, src, title}) => {
     return (
-        <div className="w-[28rem] h-[18rem] bg-white rounded-lg">
+        <div className="w-[28rem] min-h-[18rem] bg-white rounded-lg">
             <video 
-                className="w-full h-[85%] bg-black rounded-t-lg" 
-                poster="https://assets1.ignimgs.com/thumbs/userUploaded/2022/4/15/toukenranbuwarriorsfourthteampvtrailerignblogroll-1650056487514_large.jpg" 
+                className="w-full h-[80%] bg-black rounded-t-lg" 
+                poster={poster}
                 controls 
-                src="https://assets14.ign.com/videos/zencoder/2022/04/15/1280/0ee90b15b872657a75e0fc2024352f1a-1910000-1650056391.mp4"
+                src={src}
             />
-            <div className="pl-2 pt-2">
-                <p className="text-xl font-semibold text-blue-900">Movie Title</p>
+            <div className="h-[20%] ">
+                <p className="text-xl my-5 mb-10 font-semibold text-blue-900">{title}</p>
                 
             </div>
 
