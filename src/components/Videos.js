@@ -10,6 +10,7 @@ const Videos = () => {
                 data.map((d) => {
                     return <MovieItem
                         key={d.contentId}  
+                        id={d.contentId}  
                         poster={d.thumbnails[d.thumbnails.length-1].url}
                         title = {d.metadata.title}
                         src = {d.assets[d.assets.length-1].url}
