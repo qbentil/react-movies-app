@@ -8,7 +8,7 @@ const Navbar = ({page}) => {
         <a href="https://github.com/qbentil/react-movies-app" target='_blank' rel="noreferrer">
             <BsGithub color="#fff" size={24} />
         </a>
-        <span className="text-cyan-500 ml-1"> Movies</span>
+        <a href="/" className="text-cyan-500 ml-1"> Movies</a>
       </div>
       <div className="flex items-center justify-around">
         <Link
