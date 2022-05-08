@@ -1,13 +1,35 @@
-import {BsGithub} from 'react-icons/bs'
-const Navbar = () => {
-    return(
-        <div className="w-full bg-gray-800 h-16 flex  justify-around items-center ">
-            <h1 className="text-white font-bold text-xl">Movies<span className="text-blue-900"> App</span></h1>
-            <div>
-                <BsGithub color='#fff' size={26} />
-            </div>
-        </div>
-    )
-}
+import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default Navbar
+const Navbar = () => {
+    const [selected, setSelected] = useState('home')
+  return (
+    <div className="w-full bg-gray-800 h-16 flex  justify-around items-center ">
+      <div className="text-white flex items-center font-bold text-xl">
+        <a href="https://github.com/qbentil/react-movies-app" target='_blank' rel="noreferrer">
+            <BsGithub color="#fff" size={24} />
+        </a>
+        <span className="text-cyan-500 ml-1"> Movies</span>
+      </div>
+      <div className="flex items-center justify-around">
+        <Link
+          to="/"
+          className={`mx-2 text-white font-bold pb-1 ${selected === 'home' && '  border-b border-cyan-500'}`}
+          onClick = {() => setSelected('home')}
+        >
+          Home
+        </Link>
+        <Link
+          to="/watch"
+          className={`mx-2 text-white font-bold pb-1  ${selected === 'watch' && 'border-b border-cyan-500'}`}
+          onClick = {() => setSelected('watch')}
+        >
+          Watch
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
