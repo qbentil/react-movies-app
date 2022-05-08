@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({page}) => {
   return (
-    <div className="w-full bg-gray-800 h-16 flex  justify-around items-center ">
+    <div className="w-full bg-gray-800 h-[10vh] flex  justify-around items-center ">
       <div className="text-white flex items-center font-bold text-xl">
         <a href="https://github.com/qbentil/react-movies-app" target='_blank' rel="noreferrer">
             <BsGithub color="#fff" size={24} />
