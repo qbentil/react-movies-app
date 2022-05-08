@@ -1,13 +1,20 @@
 import './App.css';
 
-import Navbar from './components/navbar';
-import Videos from './components/Videos';
+import { Route, Routes } from 'react-router-dom';
+
+import Homepage from './pages/Homepage';
+import Navbar from './components/Navbar';
+import Watchpage from './pages/Watchpage';
 
 function App() {
   return (
-    <div className='m-0 p-0'>
-        <Navbar />
-        <Videos />
+    
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element = {<Homepage />} />
+        <Route path='/watch' element = {<Watchpage />} />
+      </Routes>
     </div>
   );
 }
