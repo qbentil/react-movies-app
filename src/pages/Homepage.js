@@ -6,7 +6,7 @@ import Videos from '../components/Videos'
 
 function Homepage() {
   return (
-    <div className='m-0 p-0'>
+    <div className='m-0 p-0 w-screen'>
         <Navbar page={'home'} />
         <Herosection />
         <SectionTitle title = {"Current Release"} />
