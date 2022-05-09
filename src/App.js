@@ -9,7 +9,7 @@ function App() {
   return (
       <Routes>
         <Route path='/' element = {<Homepage />} />
-        <Route path='/watch' element = {<Watchpage />} />
+        <Route path='/watch/*' element = {<Watchpage />} />
       </Routes>
   );
 }
