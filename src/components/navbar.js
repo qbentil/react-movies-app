@@ -1,5 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import {data} from '../data'
 
 const Navbar = ({page}) => {
   return (
@@ -19,6 +20,7 @@ const Navbar = ({page}) => {
         </Link>
         <Link
           to="/watch"
+          state={{movie: data[0]}}
           className={`mx-2 text-white font-bold pb-1  ${page === 'watch' && 'border-b border-cyan-500'}`}
         >
           Watch
